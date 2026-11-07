@@ -1,0 +1,72 @@
+{
+  "_readme": [
+    "把 Java 材质包 zip 放进 input/，运行 start.bat / start.sh / python run.py。",
+    "input/ 的子文件夹会当作一个材质包整体合并。",
+    "targets 非空时只处理 targets，不再自动扫描 input/。",
+    "所有相对路径都相对于本文件所在目录。"
+  ],
+  "version": 1,
+  "input_dir": "input",
+  "output_dir": "output",
+  "mode": "heightmap",
+  "modes": [],
+  "preset": "heightmap",
+  "presets": {
+    "heightmap": {
+      "modes": [
+        "heightmap"
+      ],
+      "output_format": "both",
+      "name_suffix": "_bedrock",
+      "mode_suffixes": {
+        "heightmap": ""
+      }
+    },
+    "pbr": {
+      "modes": [
+        "pbr"
+      ],
+      "output_format": "both",
+      "name_suffix": "_bedrock",
+      "mode_suffixes": {
+        "pbr": "_pbr"
+      }
+    },
+    "split": {
+      "modes": [
+        "heightmap",
+        "pbr"
+      ],
+      "output_format": "both",
+      "name_suffix": "_bedrock",
+      "mode_suffixes": {
+        "heightmap": "",
+        "pbr": "_pbr"
+      }
+    }
+  },
+  "jobs": 8,
+  "overwrite": false,
+  "watch": false,
+  "watch_interval": 5.0,
+  "verify": true,
+  "report": true,
+  "name_suffix": "_bedrock",
+  "output_format": "both",
+  "include_mode_in_name": false,
+  "vibrant_visuals": false,
+  "base_pack": null,
+  "group_by_prefix": true,
+  "conversion": {
+    "metal_threshold": 230,
+    "roughness": "linear",
+    "height_depth": 1.0,
+    "height_min_span": 8,
+    "flip_green": false,
+    "bake_ao": false,
+    "resize_mismatched": true,
+    "mixed_include_heightmap_files": true,
+    "mixed_json": "auto"
+  },
+  "targets": []
+}\n

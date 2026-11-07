@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "labpbr2bedrock"
+version = "1.0.0"
+description = "Convert Minecraft Java labPBR resource packs into Bedrock RTX PBR packs (MER / normal / heightmap + texture sets)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "labpbr2bedrock" }]
+dependencies = [
+  "Pillow>=10.0",
+  "numpy>=1.24",
+]
+
+[project.scripts]
+labpbr2bedrock = "labpbr2bedrock.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+labpbr2bedrock = ["data/*.json"]
